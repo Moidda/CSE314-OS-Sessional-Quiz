@@ -54,11 +54,11 @@ sem_init(&empty_count, 0, 5);
 Decrease semaphore by 1. \
 Waits/blocks if cannot decrease
 ```c
-sem_wait(&empty_count)
+sem_wait(&empty_count);
 ```
 Increase semaphore by 1
 ```c
-sem_post(&empty_count)
+sem_post(&empty_count);
 ```
 
 # Mutex
@@ -72,9 +72,9 @@ pthread_mutex_init(&mtx, NULL);
 ```
 Lock unlock
 ```c
-pthread_mutex_lock(&mtx)
+pthread_mutex_lock(&mtx);
 // critical region
-pthread_mutex_unlock(&mtx)
+pthread_mutex_unlock(&mtx);
 ```
 ```pthread_mutex_unlock(&mtx)``` raises error if 
 - mtx is already unlocked
